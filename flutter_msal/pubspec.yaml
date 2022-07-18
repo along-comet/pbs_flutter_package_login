@@ -1,0 +1,30 @@
+name: flutter_msal
+description: A plugin for acquiring tokens from Microsoft identity platform.
+version: 0.0.2
+repository: https://github.com/along-comet/pbs_flutter_package_login
+publish_to: none
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_msal_platform_interface:
+    git:
+      url: https://github.com/along-comet/pbs_flutter_package_login.git
+      path: flutter_msal_platform_interface
+      ref: main
+
+dev_dependencies:
+  plugin_platform_interface: ^2.1.2
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.sharepoint.flutter_msal
+        pluginClass: FlutterMsalPlugin
+      ios:
+        pluginClass: FlutterMsalPlugin
