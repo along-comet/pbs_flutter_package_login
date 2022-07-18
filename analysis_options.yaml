@@ -1,0 +1,33 @@
+include: all_lint_rules.yaml
+
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+  errors:
+    included_file_warning: ignore
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+
+linter:
+  rules:
+    always_put_control_body_on_new_line: false
+    always_put_required_named_parameters_first: false
+    always_specify_types: false
+    avoid_annotating_with_dynamic: false
+    avoid_classes_with_only_static_members: false
+    avoid_positional_boolean_parameters: false
+    avoid_types_on_closure_parameters: false
+    cascade_invocations: false
+    no_default_cases: false
+    prefer_expression_function_bodies: false
+    prefer_double_quotes: false
+    prefer_relative_imports: false
+    require_trailing_commas: false
+    unnecessary_final: false
